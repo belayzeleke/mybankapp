@@ -1,7 +1,9 @@
 package com.example.bankapp.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -9,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bankapp.databinding.ActivityMainBinding;
+import com.example.bankapp.login.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,10 +30,14 @@ public class MainActivity extends AppCompatActivity {
         binding.textMain.setOnClickListener(view -> {
             mainViewModel.onClickName();
         });
-//        textView.setText("Belay");
-//        textView.setOnClickListener(view -> {
-//            textView.setText("Zeleke");
-//        });
+
+        binding.btngotologin.setOnClickListener(view -> openLogin());
+//
+    }
+
+    private void openLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
 }

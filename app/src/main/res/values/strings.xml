@@ -3,4 +3,7 @@
     <string name="enter_password">Enter Password</string>
     <string name="enter_user_name">Enter user Name</string>
     <string name="image_logo">Image Logo</string>
+    <string name="err_username">Please Enter a user name</string>
+    <string name="err_password">Please Enter a password</string>
+    <string name="err_login">Invalid User Name or password. Please try again</string>
 </resources>

@@ -15,7 +15,7 @@ public class MainViewModel extends ViewModel {
 
     private void setName() {
         String name = "belay";
-        if (App.getInstance().getDataManager().getNameState())
+        if (App.getInstance().getDataManager().getLogin())
             name = "zeleke";
         txtName.setValue(name);
 
@@ -23,8 +23,8 @@ public class MainViewModel extends ViewModel {
     }
 
     public void onClickName() {
-        Boolean isFather = App.getInstance().getDataManager().getNameState();
-        App.getInstance().getDataManager().setNameState(!isFather);
+        Boolean isFather = App.getInstance().getDataManager().getLogin();
+        App.getInstance().getDataManager().setLogin(!isFather);
         setName();
     }
 }

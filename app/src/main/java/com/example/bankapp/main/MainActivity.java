@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         // final TextView textView= binding.textMain;
         MainViewModel mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        mainViewModel.txtName.observe(this, binding.textMain::setText);
+//        mainViewModel.txtName.observe(this, binding.textMain::setText);
 
-        binding.textMain.setOnClickListener(view -> {
-            mainViewModel.onClickName();
-        });
+//        binding.mainMenu.setOnClickListener(view -> {
+//            mainViewModel.onClickName();
+//        });
 
-        binding.btngotologin.setOnClickListener(view -> openLogin());
+        binding.layoutMain.btngotologin.setOnClickListener(view -> openLogin());
 //
     }
 
